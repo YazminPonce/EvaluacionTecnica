@@ -1,0 +1,57 @@
+<div class="container-fluid row d-flex justify-content-md-center" style="margin-top: 50px">
+    <div id="divDetalle" class="row" >
+        <div  class="mt-5 card col-lg-10 m-4 p-4 bg-light form-floating">
+            <h2 class="text-center">Gestión de Salida de inventario</h2>
+         
+            
+            
+            <div class="row g-3">
+              
+                <div class="col-lg-4 form-floating">
+
+                    <input id="txtIdProducto" readonly class="mt-2 form-control" style="display:none;">
+                    <label for="txtIdProducto" class="mt-2 " style="display:none;">ID Producto</label>
+                </div>
+              
+
+
+                <div class="col-lg-4 form-floating">
+
+                    <input id="txtCantidadActual" type="number"  class="mt-2 form-control"  readonly>
+                    <label for="txtCantidadActual"  class="mt-2 ">cantidad actual<leg style="color:red" >*</leg></label>
+                </div>
+                
+                 <div class="col-lg-4 form-floating">
+
+                    <input id="txtCantidad" type="number"  class="mt-2 form-control"  readonly>
+                    <label for="txtCantidad"  class="mt-2 ">cantidad<leg style="color:red" >*</leg></label>
+                </div>
+
+            <div class="d-flex justify-content-around mt-2">
+                <button class="mt-2 mx-1 btn btn-primary btn-lg " onclick="moduloSalidaInventario.actualizarCantidad();" id="btnDelete">Guardar Cantidad</button>
+                
+            </div>
+        </div>
+    </div>
+
+  <div id="divCatalogo" class="row">
+    <div class="mt-5 card col-lg-10 m-4 p-4 bg-light form-floating" style="margin-bottom: 10px">
+        <div class="row g-3">
+            <table class="table table-dark table-hover mt-4" id="tblProducto">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Estátus</th>
+                    </tr>
+                </thead>
+                <tbody id="tblProductos">
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
